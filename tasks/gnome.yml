@@ -1,0 +1,17 @@
+- name: configure dark color scheme
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/color-scheme"
+    value: "prefer-dark"
+    state: present
+
+- name: configure gtk-theme
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "Yaru-dark"
+    state: present 
+
+- name: configure icon-theme
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "Yaru-dark"
+    state: present 
