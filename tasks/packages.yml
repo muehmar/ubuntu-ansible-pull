@@ -4,3 +4,4 @@
       - git
       - tilix
       - meld
+      - python3-psutil
