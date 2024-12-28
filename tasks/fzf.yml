@@ -1,0 +1,15 @@
+- name: make sure git is installed
+  package:
+    name: git
+    state: present
+
+- name: fetch fzf from github
+  git:
+    repo: 'https://github.com/junegunn/fzf.git'
+    dest: /tmp/fzf/
+    version: HEAD # latest
+
+- name: Run install script
+  become: true
+  become_user: martin
+  script: /tmp/fzf/install --no-key-bindings --no-completion --update-rc
