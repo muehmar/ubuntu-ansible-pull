@@ -10,3 +10,9 @@
   community.general.snap:
     name:
       - steam
+
+- name: Install IntelliJ IDEA
+  community.general.snap:
+    name:
+      - intellij-idea-ultimate
+    classic: true
