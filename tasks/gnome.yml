@@ -24,3 +24,17 @@
     state: present
   environment:
     DBUS_SESSION_BUS_ADDRESS: "{{ lookup('env', 'DBUS_SESSION_BUS_ADDRESS') }}"
+
+- name: configure dock icon size
+  become: false
+  community.general.dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
+    value: 34
+    state: present
+
+- name: configure dock position
+  become: false
+  community.general.dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
+    value: "'BOTTOM'"
+    state: present
