@@ -35,6 +35,13 @@
 - name: configure dock position
   become: false
   community.general.dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
+    key: "/org/gnome/shell/favorite-apps"
     value: "'BOTTOM'"
+    state: present
+
+- name: configure favorites
+  become: false
+  community.general.dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
+    value: "['intellij-idea-ultimate_intellij-idea-ultimate.desktop', 'firefox.desktop', 'spotify_spotify.desktop', 'org.gnome.Nautilus.desktop']"
     state: present
