@@ -11,6 +11,7 @@
     name:
       - steam
       - keepassxc
+      - spotify
 
 - name: Install IntelliJ IDEA
   community.general.snap:
