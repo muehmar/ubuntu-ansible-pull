@@ -10,6 +10,7 @@
   community.general.snap:
     name:
       - steam
+      - keepassxc
 
 - name: Install IntelliJ IDEA
   community.general.snap:
