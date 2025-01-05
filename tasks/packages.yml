@@ -6,11 +6,22 @@
       - meld
       - python3-psutil
       
-- name: Install java
+- name: Install java 21
   apt:
     name:
       - openjdk-21-jdk
       - openjdk-21-source
+
+- name: Install java 17
+  apt:
+    name:
+      - openjdk-17-jdk
+      - openjdk-17-source
+
+- name: Set java 21 as default
+  community.general.alternatives:
+    name: java
+    path: /usr/lib/jvm/java-21-openjdk-amd64/bin/java
       
 - name: Install snap packages
   community.general.snap:
