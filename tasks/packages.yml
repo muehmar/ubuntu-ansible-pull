@@ -6,6 +6,12 @@
       - meld
       - python3-psutil
       
+- name: Install java
+  apt:
+    name:
+      - openjdk-21-jdk
+      - openjdk-21-source
+      
 - name: Install snap packages
   community.general.snap:
     name:
