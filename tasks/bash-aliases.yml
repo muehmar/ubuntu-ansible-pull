@@ -1,0 +1,13 @@
+- name: Add comment for custom bash aliases
+  become: true
+  become_user: martin
+  ansible.builtin.shell:
+    cmd: |
+      grep -qxF '# Custom bash aliases' ~/.bashrc || echo '\n# Custom bash aliases' >> ~/.bashrc
+
+- name: Add gradle alias
+  become: true
+  become_user: martin
+  ansible.builtin.shell:
+    cmd: |
+      grep -qxF 'alias gr="./gradlew"' ~/.bashrc || sed -i '/# Custom bash aliases/a alias gr="./gradlew"' ~/.bashrc
