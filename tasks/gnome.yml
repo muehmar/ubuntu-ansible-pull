@@ -1,47 +1,47 @@
 - name: configure dark color scheme
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
     key: "/org/gnome/desktop/interface/color-scheme"
     value: "'prefer-dark'"
     state: present
-  environment:
-    DBUS_SESSION_BUS_ADDRESS: "{{ lookup('env', 'DBUS_SESSION_BUS_ADDRESS') }}"
 
 - name: configure gtk-theme
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Yaru-dark'"
     state: present
-  environment:
-    DBUS_SESSION_BUS_ADDRESS: "{{ lookup('env', 'DBUS_SESSION_BUS_ADDRESS') }}"
 
 - name: configure icon-theme
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
     value: "'Yaru-dark'"
     state: present
-  environment:
-    DBUS_SESSION_BUS_ADDRESS: "{{ lookup('env', 'DBUS_SESSION_BUS_ADDRESS') }}"
 
 - name: configure dock icon size
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
     value: 34
     state: present
 
 - name: configure dock position
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
-    key: "/org/gnome/shell/favorite-apps"
+    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
     value: "'BOTTOM'"
     state: present
 
 - name: configure favorites
-  become: false
+  become: true
+  become_user: martin
   community.general.dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/dock-position"
-    value: "['intellij-idea-ultimate_intellij-idea-ultimate.desktop', 'firefox.desktop', 'spotify_spotify.desktop', 'org.gnome.Nautilus.desktop']"
+    key: "/org/gnome/shell/favorite-apps"
+    value: "['intellij-idea-ultimate_intellij-idea-ultimate.desktop', 'firefox.desktop', 'spotify_spotify.desktop', 'org.gnome.Nautilus.desktop', 'keepassxc_keepassxc.desktop']"
     state: present
