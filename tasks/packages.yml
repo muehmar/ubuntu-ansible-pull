@@ -5,6 +5,7 @@
       - tilix
       - meld
       - python3-psutil
+      - libreoffice
       
 - name: Install java 21
   apt:
