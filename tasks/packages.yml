@@ -6,6 +6,7 @@
       - meld
       - python3-psutil
       - libreoffice
+      - pdfarranger
       
 - name: Install java 21
   apt:
