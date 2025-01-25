@@ -7,7 +7,6 @@
       - python3-psutil
       - libreoffice
       - pdfarranger
-      - direnv
       - curl
       
 - name: Install java 21

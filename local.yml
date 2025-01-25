@@ -13,3 +13,4 @@
     - include_tasks: tasks/gnome.yml
     - include_tasks: tasks/tilix-config.yml
     - include_tasks: tasks/bash-aliases.yml
+    - include_tasks: tasks/direnv.yml
