@@ -8,6 +8,7 @@
       - libreoffice
       - pdfarranger
       - curl
+      - simple-scan
       
 - name: Install java 21
   apt:
