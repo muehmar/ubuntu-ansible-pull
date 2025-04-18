@@ -9,6 +9,7 @@
       - pdfarranger
       - curl
       - simple-scan
+      - vlc
       
 - name: Install java 21
   apt:
