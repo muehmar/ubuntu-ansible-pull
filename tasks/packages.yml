@@ -11,6 +11,7 @@
       - simple-scan
       - vlc
       - podman
+      - podman-compose
       
 - name: Install java 21
   apt:
