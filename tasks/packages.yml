@@ -12,6 +12,7 @@
       - vlc
       - podman
       - podman-compose
+      - npm
       
 - name: Install java 21
   apt:
