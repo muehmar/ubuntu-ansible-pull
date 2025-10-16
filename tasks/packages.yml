@@ -12,6 +12,7 @@
       - vlc
       - podman
       - podman-compose
+      - nodejs
       - npm
       
 - name: Install java 21

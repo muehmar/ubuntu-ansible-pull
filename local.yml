@@ -10,6 +10,7 @@
    
   tasks:
     - include_tasks: tasks/packages.yml
+    - include_tasks: tasks/claude-code.yml
     - include_tasks: tasks/gnome.yml
     - include_tasks: tasks/tilix-config.yml
     - include_tasks: tasks/bash-aliases.yml
