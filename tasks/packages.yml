@@ -15,6 +15,7 @@
       - nodejs
       - npm
       - gimp
+      - flameshot
       
 - name: Install java 21
   apt:
